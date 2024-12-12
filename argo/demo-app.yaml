@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/akishehara/demo-project.git'  # Replace with your GitHub username/repository
+    targetRevision: HEAD
+    path: k8s  # This should point to the directory containing your Kubernetes manifests (like deployment.yaml and service.yaml)
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
