@@ -15,6 +15,6 @@ spec:
       serviceAccountName: github-actions
       containers:
       - name: demo-app
-        image: gcr.io/codimite-devops-assesment/demo-app:latest
+        image: gcr.io/codimite-devops-assesment/demo-app:fa439770770c4225acac2384d8b3aeb7ccfd6129
         ports:
         - containerPort: 3000
