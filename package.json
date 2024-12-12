@@ -1,0 +1,10 @@
+{
+    "name": "demo-app",
+    "version": "1.0.0",
+    "description": "Demo package.json file for the CI/CD pipeline.",
+    "scripts": {
+      "lint": "echo \"No linting configured.\"",
+      "test": "echo \"No tests configured.\""
+    }
+  }
+  
