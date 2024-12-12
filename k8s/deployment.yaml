@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demo-app
+  template:
+    metadata:
+      labels:
+        app: demo-app
+    spec:
+      serviceAccountName: github-actions
+      containers:
+      - name: demo-app
+        image: gcr.io/codimite-devops-assesment/demo-app:latest
+        ports:
+        - containerPort: 3000
